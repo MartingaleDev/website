@@ -1,3 +1,3 @@
-import SearchRepoContainer from 'containers/SearchRepoContainer'
+import MainContainer from 'containers/MainContainer'
 
-export default SearchRepoContainer
+export default MainContainer

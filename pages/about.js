@@ -1,1 +1,3 @@
-export default props => <h1>About</h1>
+import AboutContainer from 'containers/AboutContainer'
+
+export default AboutContainer

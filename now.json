@@ -1,5 +1,5 @@
 {
-  "name": "nextjs-redux-starter",
+  "name": "@martingale/website",
   "public": true,
   "version": 2,
   "builds": [{

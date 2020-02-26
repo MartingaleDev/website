@@ -44,7 +44,7 @@ export default class extends Document {
   }
 
   get helmetJsx () {
-    const title = 'Hello next.js Real World!'
+    const title = 'Martingale Technologies: Blockchain Development'
     return (
       <Helmet>
         <title>{title}</title>

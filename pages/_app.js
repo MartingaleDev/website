@@ -9,6 +9,8 @@ import createStore from 'store/createStore'
 import Layout from 'components/Layout'
 import theme from 'theme'
 
+import 'semantic-ui-css/semantic.min.css'
+
 const GlobalStyle = createGlobalStyle`
   ${styledNormalize}
 `
