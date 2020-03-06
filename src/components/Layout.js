@@ -8,6 +8,7 @@ import {
   Grid,
   Header,
   Input,
+  Image,
   List,
   Menu,
   Segment
@@ -21,8 +22,7 @@ export default class Layout extends PureComponent {
           <Container>
             <Link href='/'>
               <Menu.Item as='a' header>
-                {/* <Image size='mini' src='/logo.png' style={{ marginRight: '1.5em' }} /> */}
-                Martingale Technologies
+                <Image size='small' src='/static/Martingale-logo/vector/default-monochrome.svg' />
               </Menu.Item>
             </Link>
             <Link href='/about'>
@@ -30,9 +30,11 @@ export default class Layout extends PureComponent {
             </Link>
 
             <Dropdown item simple text='More' position='right'>
-              <Dropdown.Menu>
-                <Dropdown.Item>Blog</Dropdown.Item>
-                <Dropdown.Item>GitHub</Dropdown.Item>
+              <Dropdown.Menu inverted>
+                <Link href='/blog'>
+                  <Dropdown.Item as='a'>Blog</Dropdown.Item>
+                </Link>
+                <Dropdown.Item as='a' onClick={() => window.open('https://github.com/martingaledev')}>GitHub</Dropdown.Item>
                 <Dropdown.Item>Riot</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
@@ -47,7 +49,9 @@ export default class Layout extends PureComponent {
               <Grid.Column width={3}>
                 <Header inverted as='h4' content='General' />
                 <List link inverted>
-                  <List.Item as='a'>About</List.Item>
+                  <Link href='/about'>
+                    <List.Item as='a'>About</List.Item>
+                  </Link>
                   <List.Item as='a'>Contact</List.Item>
                   <List.Item as='a'>Careers</List.Item>
                 </List>
@@ -62,8 +66,12 @@ export default class Layout extends PureComponent {
               <Grid.Column width={3}>
                 <Header inverted as='h4' content='Community' />
                 <List link inverted>
-                  <List.Item as='a'>Blog</List.Item>
-                  <List.Item as='a'>GitHub</List.Item>
+                  <Link href='/blog'>
+                    <List.Item as='a'>Blog</List.Item>
+                  </Link>
+                  <a href='https://github.com/martingaledev'>
+                    <List.Item as='a'>GitHub</List.Item>
+                  </a>
                   <List.Item as='a'>Riot Chat</List.Item>
                 </List>
               </Grid.Column>

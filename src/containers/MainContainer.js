@@ -9,16 +9,17 @@ import {
   Image,
   Segment
 } from 'semantic-ui-react'
+import Link from 'next/link'
 
 export default class MainContainer extends PureComponent {
   render () {
     return (
       <Fragment>
-        <Segment style={{ padding: '8em 0em' }} vertical>
+        <Segment vertical inverted style={{ padding: '8em 0em' }}>
           <Grid container stackable verticalAlign='middle'>
             <Grid.Row>
-              <Grid.Column width={8}>
-                <Header as='h3' style={{ fontSize: '2em' }}>
+              <Grid.Column width={12}>
+                <Header as='h3' inverted style={{ fontSize: '2em' }}>
                   We Build R&D Blockchain Products
                 </Header>
                 <p style={{ fontSize: '1.33em' }}>
@@ -26,12 +27,12 @@ export default class MainContainer extends PureComponent {
                   the core of the next web revolution.
                 </p>
               </Grid.Column>
-              <Grid.Column floated='right' width={6}>
-                <Image rounded size='massive' src='/static/undraw_nakamoto_2iv6.svg' />
-              </Grid.Column>
             </Grid.Row>
             <Grid.Row>
-              <Grid.Column textAlign='center'>
+              <Grid.Column width={12}>
+
+              </Grid.Column>
+              <Grid.Column textAlign='center' width={4}>
                 <a href='#current-projects'>
                   <Button size='huge'>Check Them Out</Button>
                 </a>
@@ -84,9 +85,11 @@ export default class MainContainer extends PureComponent {
               platform that allows anyone to permissionlessly create, trade, and
               build markets for forecasted data.
             </p>
-            <Button as='a' size='large'>
-              Read More
-            </Button>
+            <Link href='/blog/introducing-omen'>
+              <Button as='a' size='large'>
+                Read More
+              </Button>
+            </Link>
           </Container>
         </Segment>
       </Fragment>

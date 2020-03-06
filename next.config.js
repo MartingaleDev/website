@@ -3,7 +3,13 @@ const { ANALYZE, ASSET_HOST } = process.env
 // for those who using CDN
 const assetPrefix = ASSET_HOST || ''
 
-module.exports = {
+const withMDX = require('@next/mdx')({
+  extension: /\.(md|mdx)$/
+})
+
+const withImages = require('next-images')
+
+module.exports = withImages(withMDX({
   assetPrefix,
   target: 'serverless',
   webpack: (config, { dev }) => {
@@ -19,5 +25,6 @@ module.exports = {
     }
 
     return config
-  }
-}
+  },
+  pageExtensions: ['js', 'jsx', 'md', 'mdx']
+}))
