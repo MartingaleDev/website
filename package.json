@@ -29,7 +29,7 @@
     "styled-components": "^5.0.0",
     "styled-normalize": "^8.0.6"
   },
-  "name": "nextjs-redux-starter",
+  "name": "website",
   "version": "1.0.0",
   "main": "server/index.js",
   "devDependencies": {
@@ -88,9 +88,9 @@
       "@testing-library/jest-dom/extend-expect"
     ]
   },
-  "repository": "CodementorIO/nextjs-redux-starter",
-  "bugs": "https://github.com/CodementorIO/nextjs-redux-starter/issues",
-  "author": "Ian Wang <gogoenwon@gmail.com> (https://github.com/IanWang)",
-  "license": "ISC",
-  "description": "Opinionated Next.js starter with Express, Redux, SASS, and Jest."
+  "repository": "MartingaleDev/website",
+  "bugs": "https://github.com/MartingaleDev/website/issues",
+  "author": "Logan Saether <logan@martingale.dev> (https://github.com/lsaether)",
+  "license": "MIT",
+  "description": "Martingale's website."
 }
