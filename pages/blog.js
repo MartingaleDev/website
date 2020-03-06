@@ -10,44 +10,22 @@ import {
   Grid,
   Segment
 } from 'semantic-ui-react'
-import Link from 'next/link'
+// import Link from 'next/link'
 
 const { MartingaleBlue } = require('@airwavves/colors')
 
 const Posts = [
   {
     title: 'Introducing Omen',
-    image: '/static/undraw_marketing_v0iu.svg',
-    slug: 'introducing-omen',
-    author: 'Logan Saether',
-    date: '7 March 2020',
-    teaser: 'Omen is a prediction market protocol.'
-  },
-  {
-    title: 'Introducing Omen',
-    image: '/static/undraw_marketing_v0iu.svg',
-    slug: 'introducing-omen',
-    author: 'Logan Saether',
-    date: '7 March 2020',
-    teaser: 'Omen is a prediction market protocol.'
-  },
-  {
-    title: 'Introducing Omen',
-    image: '/static/undraw_marketing_v0iu.svg',
-    slug: 'introducing-omen',
-    author: 'Logan Saether',
-    date: '7 March 2020',
-    teaser: 'Omen is a prediction market protocol.'
-  },
-  {
-    title: 'Introducing Omen',
-    image: '/static/undraw_marketing_v0iu.svg',
+    image: '/static/eclipse.jpg',
     slug: 'introducing-omen',
     author: 'Logan Saether',
     date: '7 March 2020',
     teaser: 'Omen is a prediction market protocol.'
   }
 ]
+
+let alert
 
 const renderPosts = () => Posts.map((post) => (
   <Card raised key={post.slug + Math.random().toString()}>
@@ -67,11 +45,11 @@ const renderPosts = () => Posts.map((post) => (
         {post.teaser}
       </Card.Description>
       <Divider />
-      <Link href={`/blog/${post.slug}`}>
-        <Button color='blue' floated='right'>
+      {/* <Link href={`/blog/${post.slug}`}> */}
+      <Button color='blue' floated='right' onClick={() => alert('Coming soon')}>
             Read
-        </Button>
-      </Link>
+      </Button>
+      {/* </Link> */}
     </Card.Content>
   </Card>
 ))

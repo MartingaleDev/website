@@ -9,3 +9,7 @@ Let's see _how_ **good** this markdown parser is.
 - one
 - two
 - three
+
+```js
+const someCode = require('myCode');
+```

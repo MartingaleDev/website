@@ -5,7 +5,7 @@ export default class AboutContainer extends PureComponent {
   render () {
     return (
       <Fragment>
-        <Segment style={{ padding: '8em 0em' }}>
+        <Segment style={{ padding: '8em 0em' }} basic>
           <Grid container verticalAlign='middle'>
             <Grid.Row>
               <Grid.Column width={10} style={{ padding: '0em 2em' }}>

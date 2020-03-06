@@ -85,7 +85,7 @@ export default class MainContainer extends PureComponent {
               platform that allows anyone to permissionlessly create, trade, and
               build markets for forecasted data.
             </p>
-            <Link href='/blog/introducing-omen'>
+            <Link href='/blog'>
               <Button as='a' size='large'>
                 Read More
               </Button>
