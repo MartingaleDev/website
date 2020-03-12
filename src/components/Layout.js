@@ -20,6 +20,7 @@ import {
 import * as emailValidator from 'email-validator'
 
 import gh from '../libs/github'
+import config from 'config'
 
 export default class Layout extends Component {
   state = { open: false, emailError: false };
@@ -40,6 +41,7 @@ export default class Layout extends Component {
 
   submitEmail = () => {
     const { emailInput } = this.state
+    console.log(config)
     if (emailValidator.validate(emailInput)) {
       // Success
       gh.saveEmail(emailInput)
