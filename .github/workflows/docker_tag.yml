@@ -1,4 +1,4 @@
-name: Publish Docker
+name: Publish to Docker and Serve
 # This workflow is triggered on pushes to master.
 on: 
   push:

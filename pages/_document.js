@@ -60,7 +60,7 @@ export default class extends Document {
         <Head>
           { this.helmetJsx }
           { this.helmetHeadComponents }
-          <link rel='shortcut icon' href='/static/icon.ico' />
+          <link rel='shortcut icon' href='/static/favicon.ico' />
         </Head>
         <body {...this.helmetBodyAttrComponents}>
           <Main />
