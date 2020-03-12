@@ -16,4 +16,4 @@ jobs:
                 host: ${{ secrets.HOST }}
                 username: ${{ secrets.USERNAME }}
                 key: ${{ secrets.KEY }}
-                script: touch lol.txt; echo lol >> lol.txt
+                script: docker pull lsaether/martingale; systemctl restart martingale-website
