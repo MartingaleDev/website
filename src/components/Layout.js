@@ -32,7 +32,6 @@ export default class Layout extends Component {
 
   inputChange = (e) => {
     const { name, value } = e.target
-    console.log(name, value)
     this.setState({
       [name]: value,
       emailError: false
