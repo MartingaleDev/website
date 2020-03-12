@@ -50,7 +50,7 @@ export default class MainContainer extends PureComponent {
                   Innovative Products
                 </Header>
                 <p style={{ fontSize: '1.33em' }}>
-                  We design and implement innovative products from scratch.
+                  We design innovate products from scratch and implement them ourselves.
                 </p>
               </Grid.Column>
               <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
