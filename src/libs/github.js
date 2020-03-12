@@ -1,15 +1,32 @@
-// import axios from 'axios'
-// import humps from 'humps'
-// import config from 'config'
+import { Octokit } from '@octokit/rest'
+import config from 'config'
 
-// const github = {
-//   getTopRepos ({ lang = 'javascript' }) {
-//     const path = `${config.githubApiEndpoint}/search/repositories?q=language:${lang}&sort=stars&order=desc`
-//     return axios.get(path).then(res => {
-//       return humps.camelizeKeys(res.data)
-//     })
-//     return Promise.resolve(true)
-//   }
-// }
+const octokit = new Octokit({
+  auth: config.ghAuth
+})
 
-// export default github
+const gh = {
+  saveEmail: async (newEmail) => {
+    const oldEmails = await octokit.gists.get({
+      gist_id: config.gistId
+    })
+    const oldContent = oldEmails.data.files.emails.content
+    const newContent = oldContent + `\n${newEmail}`
+    const res = await octokit.gists.update({
+      gist_id: config.gistId,
+      files: {
+        emails: {
+          content: newContent
+        }
+      }
+    })
+
+    if (res.status === 200) return true
+    else {
+      console.error('Non-200 response to sending email:', res.status)
+      return false
+    }
+  }
+}
+
+export default gh

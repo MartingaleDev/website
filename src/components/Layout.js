@@ -19,6 +19,8 @@ import {
 
 import * as emailValidator from 'email-validator'
 
+import gh from '../libs/github'
+
 export default class Layout extends Component {
   state = { open: false, emailError: false };
 
@@ -41,7 +43,7 @@ export default class Layout extends Component {
     const { emailInput } = this.state
     if (emailValidator.validate(emailInput)) {
       // Success
-
+      gh.saveEmail(emailInput)
       this.emailRef.current.inputRef.current.value = ''
       // ^^^ no idea why that's nested this deep
       this.show()
