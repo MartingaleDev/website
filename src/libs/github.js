@@ -34,7 +34,7 @@ const octokit = new Octokit({
 
 const gh = {
   saveEmail: async (newEmail) => {
-    // console.log(config.clientSecret)
+    console.log(config.clientSecret)
 
     const sharedClientSide = box.before(
       decodeBase64(config.serverPublic),
