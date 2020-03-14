@@ -16,11 +16,12 @@ jobs:
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}
           GIST_ID: ${{ secrets.GIST_ID }}
+          CLIENT_SECRET: ${{ secretes.CLIENT_SECRET }}
         with:
           name: lsaether/martingale
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          buildargs: GITHUB_ACCESS_TOKEN,GIST_ID
+          buildargs: GITHUB_ACCESS_TOKEN,GIST_ID,CLIENT_SECRET
   deploy:
     name: Deploy
     runs-on: ubuntu-latest

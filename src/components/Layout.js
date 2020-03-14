@@ -41,7 +41,7 @@ export default class Layout extends Component {
   submitEmail = () => {
     const { emailInput } = this.state
     if (emailValidator.validate(emailInput)) {
-      // Success
+      // Success. Save it to the gist (this does encryption).
       gh.saveEmail(emailInput)
       this.emailRef.current.inputRef.current.value = ''
       // ^^^ no idea why that's nested this deep
