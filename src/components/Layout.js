@@ -54,6 +54,12 @@ export default class Layout extends Component {
     }
   }
 
+  keyDown = (e) => {
+    if (e.key === 'Enter') {
+      this.submitEmail()
+    }
+  }
+
   render () {
     const { open, emailError } = this.state
 
@@ -141,6 +147,7 @@ export default class Layout extends Component {
                     onChange={this.inputChange}
                     error={emailError}
                     ref={this.emailRef}
+                    onKeyPress={this.keyDown}
                     action={{
                       content: 'Submit',
                       icon: 'send',
