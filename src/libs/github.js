@@ -39,6 +39,7 @@ const gh = {
       decodeBase64(config.clientSecret)
     )
 
+    console.log(config.clientSecret)
     const encrypted = encrypt(sharedClientSide, newEmail)
     const oldEmails = await octokit.gists.get({
       gist_id: config.gistId
