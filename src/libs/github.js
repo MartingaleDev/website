@@ -34,12 +34,13 @@ const octokit = new Octokit({
 
 const gh = {
   saveEmail: async (newEmail) => {
+    // console.log(config.clientSecret)
+
     const sharedClientSide = box.before(
       decodeBase64(config.serverPublic),
       decodeBase64(config.clientSecret)
     )
 
-    console.log(config.clientSecret)
     const encrypted = encrypt(sharedClientSide, newEmail)
     const oldEmails = await octokit.gists.get({
       gist_id: config.gistId
